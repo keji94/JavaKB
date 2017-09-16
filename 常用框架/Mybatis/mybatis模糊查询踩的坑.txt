@@ -1,0 +1,6 @@
+mybatis模糊查询方式的一种：
+	 <if test="queryParam.name != null">
+                AND name LIKE '%${queryParam.name}%'
+         </if>
+
+今天考虑到sql注入，将上面的$ 换成#号，没想到出现参数越界异常。最后换成$成功了。记住这里不能用#。
