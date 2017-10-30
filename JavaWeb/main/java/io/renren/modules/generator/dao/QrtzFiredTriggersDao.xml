@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.QrtzFiredTriggersDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.QrtzFiredTriggersEntity" id="qrtzFiredTriggersMap">
+        <result property="schedName" column="SCHED_NAME"/>
+        <result property="entryId" column="ENTRY_ID"/>
+        <result property="triggerName" column="TRIGGER_NAME"/>
+        <result property="triggerGroup" column="TRIGGER_GROUP"/>
+        <result property="instanceName" column="INSTANCE_NAME"/>
+        <result property="firedTime" column="FIRED_TIME"/>
+        <result property="schedTime" column="SCHED_TIME"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="state" column="STATE"/>
+        <result property="jobName" column="JOB_NAME"/>
+        <result property="jobGroup" column="JOB_GROUP"/>
+        <result property="isNonconcurrent" column="IS_NONCONCURRENT"/>
+        <result property="requestsRecovery" column="REQUESTS_RECOVERY"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="io.renren.modules.generator.entity.QrtzFiredTriggersEntity">
+		select * from QRTZ_FIRED_TRIGGERS where SCHED_NAME = #{value}
+	</select>
+
+	<select id="queryList" resultType="io.renren.modules.generator.entity.QrtzFiredTriggersEntity">
+		select * from QRTZ_FIRED_TRIGGERS
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by SCHED_NAME desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from QRTZ_FIRED_TRIGGERS 
+	</select>
+	 
+	<insert id="save" parameterType="io.renren.modules.generator.entity.QrtzFiredTriggersEntity">
+		insert into QRTZ_FIRED_TRIGGERS
+		(
+			`SCHED_NAME`, 
+			`ENTRY_ID`, 
+			`TRIGGER_NAME`, 
+			`TRIGGER_GROUP`, 
+			`INSTANCE_NAME`, 
+			`FIRED_TIME`, 
+			`SCHED_TIME`, 
+			`PRIORITY`, 
+			`STATE`, 
+			`JOB_NAME`, 
+			`JOB_GROUP`, 
+			`IS_NONCONCURRENT`, 
+			`REQUESTS_RECOVERY`
+		)
+		values
+		(
+			#{schedName}, 
+			#{entryId}, 
+			#{triggerName}, 
+			#{triggerGroup}, 
+			#{instanceName}, 
+			#{firedTime}, 
+			#{schedTime}, 
+			#{priority}, 
+			#{state}, 
+			#{jobName}, 
+			#{jobGroup}, 
+			#{isNonconcurrent}, 
+			#{requestsRecovery}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="io.renren.modules.generator.entity.QrtzFiredTriggersEntity">
+		update QRTZ_FIRED_TRIGGERS 
+		<set>
+			<if test="entryId != null">`ENTRY_ID` = #{entryId}, </if>
+			<if test="triggerName != null">`TRIGGER_NAME` = #{triggerName}, </if>
+			<if test="triggerGroup != null">`TRIGGER_GROUP` = #{triggerGroup}, </if>
+			<if test="instanceName != null">`INSTANCE_NAME` = #{instanceName}, </if>
+			<if test="firedTime != null">`FIRED_TIME` = #{firedTime}, </if>
+			<if test="schedTime != null">`SCHED_TIME` = #{schedTime}, </if>
+			<if test="priority != null">`PRIORITY` = #{priority}, </if>
+			<if test="state != null">`STATE` = #{state}, </if>
+			<if test="jobName != null">`JOB_NAME` = #{jobName}, </if>
+			<if test="jobGroup != null">`JOB_GROUP` = #{jobGroup}, </if>
+			<if test="isNonconcurrent != null">`IS_NONCONCURRENT` = #{isNonconcurrent}, </if>
+			<if test="requestsRecovery != null">`REQUESTS_RECOVERY` = #{requestsRecovery}</if>
+		</set>
+		where SCHED_NAME = #{schedName}
+	</update>
+	
+	<delete id="delete">
+		delete from QRTZ_FIRED_TRIGGERS where SCHED_NAME = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from QRTZ_FIRED_TRIGGERS where SCHED_NAME in 
+		<foreach item="schedName" collection="array" open="(" separator="," close=")">
+			#{schedName}
+		</foreach>
+	</delete>
+
+</mapper>
