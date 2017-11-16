@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>简单的jQuery验证码插件jquery.idcode.js支持IE9</title>
+<link type="text/css" rel="stylesheet" href="css/jquery.idcode.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.idcode.js"></script>
+</head>
+
+<body>
+<label class="lblVerification">验证码</label>
+<input type="text" id="Txtidcode" class="txtVerification" />
+<span id="idcode"></span>
+<div>
+	<button type="button" id="btns">点此验证</button>
+</div>
+<script type="text/javascript">
+$.idcode.setCode();
+$("#btns").click(function (){
+	var IsBy = $.idcode.validateCode(); 
+	alert(IsBy);
+	console.log(IsBy);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)http://www.phpcaptcha.org/documentation/quickstart-guide/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Securimage PHP Captcha   |  Quickstart Guide</title>
+
+
+<style type="text/css" media="screen">
+    #nav {width:650px;left:360px;}
+</style>
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.phpcaptcha.org/feed/">
+<link href="./快速上手_files/reset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./快速上手_files/960_24_col.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./快速上手_files/master.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./快速上手_files/superfish.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./快速上手_files/style2.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="pingback" href="http://www.phpcaptcha.org/xmlrpc.php">
+ 
+<script type="text/javascript" async="" src="./快速上手_files/ga.js"></script><script type="text/javascript" async="" src="./快速上手_files/load.js"></script><script type="text/javascript" src="./快速上手_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./快速上手_files/jquery.js"></script>
+<script type="text/javascript" src="./快速上手_files/jquery-migrate.min.js"></script>
+<link rel="prev" title="Docs" href="http://www.phpcaptcha.org/documentation/">
+<link rel="next" title="Download" href="http://www.phpcaptcha.org/download/">
+<link rel="canonical" href="./快速上手_files/快速上手.htm">
+<link rel="shortlink" href="http://www.phpcaptcha.org/?p=8">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<link rel="stylesheet" type="text/css" href="./快速上手_files/shCore.css"><link rel="stylesheet" type="text/css" href="./快速上手_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="./快速上手_files/superfish.js"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function(){
+// superfish menus
+jQuery('ul.menu').superfish();
+});
+</script>
+
+<script type="text/javascript" src="./快速上手_files/prettyPhoto.js"></script>
+<link type="text/css" media="screen" rel="stylesheet" href="./快速上手_files/prettyphoto.css">
+<script type="text/javascript" charset="utf-8">
+		jQuery.noConflict();
+		jQuery(document).ready(function(){
+			jQuery("a[rel^='prettyphoto']").prettyPhoto({
+				animationSpeed: 'normal', /* fast/slow/normal */
+				padding: 40, /* padding for each side of the picture */
+				opacity: 0.35, /* Value betwee 0 and 1 */
+				showTitle: false, /* true/false */
+				allowresize: true, /* true/false */
+				counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+				theme: 'light_rounded', /* light_rounded / dark_rounded / light_square / dark_square */
+				hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
+				modal: false, /* If set to true, only the close button will close the window */
+				changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
+				callback: function(){} /* Called when prettyPhoto is closed */
+			});
+		});
+	</script>
+
+<!--[if IE 6]>
+<link href="http://www.phpcaptcha.org/wp-content/themes/orion/css/ie6.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="http://www.phpcaptcha.org/wp-content/themes/orion/js/pngfix.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('h1#graphic a,span#graphic a,div#nav ul.menu li,div#nav ul.menu li a,#st_slider_nav a.previous, #st_slider_nav a.next, #st_slider img,div#main,div#nav ul.menu,img.alignleft,img.alignright,.copy a,div#sticker');
+</script>
+<![endif]-->
+
+<!--[if IE 7]>
+<link href="http://www.phpcaptcha.org/wp-content/themes/orion/css/ie7.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+
+<!--[if lt IE 8]>  
+<link href="http://www.phpcaptcha.org/wp-content/themes/orion/css/ie8.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+<script type="text/javascript">var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-1523095-12']);_gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+</head>
+
+<body class="page page-id-8 page-child parent-pageid-6 page-template-default" style="">
+<script type="text/javascript">
+    window._idl = {};
+    _idl.variant = "banner";
+    (function() {
+        var idl = document.createElement('script');
+        idl.type = 'text/javascript';
+        idl.async = true;
+        idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
+        document.getElementsByTagName('body')[0].appendChild(idl);
+    })();
+</script><script type="text/javascript" async="" src="./快速上手_files/saved_resource"></script>
+
+
+
+
+
+<div id="main">
+
+<div class="container_24" id="container">
+
+  <div class="mainbody">
+
+    <div class="grid_24">
+
+      <div id="content" class="r">
+
+		
+		
+		<div class="post" id="post-8">
+
+			
+                                				<h1>快速上手</h1>
+                                
+			
+			<div class="entry">
+
+			
+				<p>Securimage下载后不需要进行配置。你要做的就是在表单的某处展示它，并且在你的表单处理脚本中进行验证。自定义验证码图像也十分简单。此文档告诉你如何在一个表格中加入Securimage验证码</p>
+<p>首先， <a href="http://www.phpcaptcha.org/download/">下载</a> Securimage，然后上传到你的web服务器上面。在下面这个例子中，我们假设Securimage文件已经被上传到根目录下一个名为“securimage”的目录中(例如： www.yoursite.com/securimage/).</p>
+<p>接下来,我们将captcha验证码插入到你的表单中，并且为用户输入验证码设置一个输入框</p>
+<p>在你准备放验证码的地方，添加下面的代码，这样就可以展示出CAPTCHA验证码了：</p>
+<div id="highlighter_300166" class="syntaxhighlighter  "><div class="bar         "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_300166_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_300166" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">img</code> <code class="color1">id</code><code class="plain">=</code><code class="string">"captcha"</code> <code class="color1">src</code><code class="plain">=</code><code class="string">"/securimage/securimage_show.php"</code> <code class="color1">alt</code><code class="plain">=</code><code class="string">"CAPTCHA Image"</code> <code class="plain">/&gt;</code></td></tr></tbody></table></div></div></div>
+<p>然后添加如下HTML代码来创建一个输入框：</p>
+<div id="highlighter_290396" class="syntaxhighlighter  "><div class="bar        "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_290396_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_290396" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">input</code> <code class="color1">type</code><code class="plain">=</code><code class="string">"text"</code> <code class="color1">name</code><code class="plain">=</code><code class="string">"captcha_code"</code> <code class="color1">size</code><code class="plain">=</code><code class="string">"10"</code> <code class="color1">maxlength</code><code class="plain">=</code><code class="string">"6"</code> <code class="plain">/&gt;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">&lt;</code><code class="keyword">a</code> <code class="color1">href</code><code class="plain">=</code><code class="string">"#"</code> <code class="color1">onclick</code><code class="plain">=</code><code class="string">"document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false"</code><code class="plain">&gt;[ 换一个 ]&lt;/</code><code class="keyword">a</code><code class="plain">&gt;</code></td></tr></tbody></table></div></div></div>
+<p>注意：你可以改变输入框的最大长度和字号来适应你的验证码图像。<br>
+第二行代码可以为看不清当前图像的用户生成一个新的图像。</p>
+<p>当你觉得表单里的验证码已经合适了，我们就可以开始编辑PHP端的表单信息验证了</p>
+<p>打开表单信息处理的脚本<br>
+不知道是哪个？学学HTML去吧！！！（米国村长注） 在你&lt;form&gt;标签里的<strong>action</strong> 属性里。</p>
+<p>注意：为了使用Securimage，你的表单处理脚本必须为PHP语言。</p>
+<p>在脚本的第一行添加下面的代码：</p>
+<div id="highlighter_84868" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_84868_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_84868" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">&lt;?php session_start(); ?&gt;</code></td></tr></tbody></table></div></div></div>
+<div class="note info">把这个放在最上面至关重要, session_start()前面有任何输出都会导致脚本错误</div>
+<p>接下来几步将依赖于你的代码如何处理表单验证。如果你对PHP不太了解，下面的部分会比较难。</p>
+<p>为了检查验证码是否输入正确，我们将请求Securimage类， 下面的代码需要正确的集成到你的表单处理脚本中。建议将它放在错误检查之后，当表单其他数据没有问题之后再去验证CAPTCHA。应当将其放在 &lt;?php ?&gt; 标签内。</p>
+<div id="highlighter_202217" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_202217_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_202217" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">include_once</code> <code class="variable">$_SERVER</code><code class="plain">[</code><code class="string">'DOCUMENT_ROOT'</code><code class="plain">] . </code><code class="string">'/securimage/securimage.php'</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="variable">$securimage</code> <code class="plain">= </code><code class="keyword">new</code> <code class="plain">Securimage();</code></td></tr></tbody></table></div></div></div>
+<p>这个引用的文件包含Securimage的源码，负责创建、管理和验证CAPTCHA。</p>
+<p>下面我们将检查用户输入的验证码是否正确。</p>
+<div id="highlighter_91185" class="syntaxhighlighter  "><div class="bar                "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_91185_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_91185" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/quickstart-guide/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">if</code> <code class="plain">(</code><code class="variable">$securimage</code><code class="plain">-&gt;check(</code><code class="variable">$_POST</code><code class="plain">[</code><code class="string">'captcha_code'</code><code class="plain">]) == false) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="comments">// 验证码错误</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="comments">// 你应该处理这个错误，否则脚本将继续执行</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="comments">// 或者，如果没有验证成功，你也不知道原因的时候，可以使用下面的代码</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="functions">echo</code> <code class="string">"验证码输入错误&lt;br /&gt;&lt;br /&gt;"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="functions">echo</code> <code class="string">"请&lt;a href='javascript:history.go(-1)'&gt;返回&lt;/a&gt;重试。"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="functions">exit</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p>调用验证码检查方法来检查用户的输入。若验证码错误，将输入错误信息，并后退到表单输入界面。PHP脚本则以exit()结束。<br>
+确保你检查完验证码，并且表单无其他错误之后，再将表单信息存入数据库。</p>
+<p>根据上面的教程，你能够使用Securimage最基本的功能了。学习如何<a href="./定制验证码.htm">定制</a>captcha 验证码或者查看<a href="http://www.phpcaptcha.org/faq/">帮助</a>来解决你遇到的问题</p>
+
+				<div class="clearfix"></div>
+
+				
+			</div>
+
+		</div>
+
+		
+
+	    
+		
+
+	
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+		
+	
+  
+
+
+
+		  </div><!--/content-->
+
+		</div>
+
+	
+	
+
+	
+
+	
+	<div class="clear"></div>
+
+	</div><!--/container-->
+
+	</div><!--/main-->
+
+	</div><!--/mainbody-->
+
+
+
+
+
+<script type="text/javascript" src="./快速上手_files/shCore.js"></script>
+<script type="text/javascript" src="./快速上手_files/shBrushXml.js"></script>
+<script type="text/javascript" src="./快速上手_files/shBrushPhp.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeDefault.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+
+
+</body></html>

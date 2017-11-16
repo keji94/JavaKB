@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0063)http://www.phpcaptcha.org/documentation/customizing-securimage/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Securimage PHP Captcha   |  Customizing Securimage</title>
+
+
+<style type="text/css" media="screen">
+    #nav {width:650px;left:360px;}
+</style>
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.phpcaptcha.org/feed/">
+<link href="./定制验证码_files/reset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./定制验证码_files/960_24_col.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./定制验证码_files/master.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./定制验证码_files/superfish.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./定制验证码_files/style2.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="pingback" href="http://www.phpcaptcha.org/xmlrpc.php">
+ 
+<script type="text/javascript" async="" src="./定制验证码_files/ga.js"></script><script type="text/javascript" async="" src="./定制验证码_files/load.js"></script><script type="text/javascript" src="./定制验证码_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./定制验证码_files/jquery.js"></script>
+<script type="text/javascript" src="./定制验证码_files/jquery-migrate.min.js"></script>
+<link rel="prev" title="Download" href="http://www.phpcaptcha.org/download/">
+<link rel="next" title="Contact" href="http://www.phpcaptcha.org/contact/">
+<link rel="canonical" href="./定制验证码_files/定制验证码.htm">
+<link rel="shortlink" href="http://www.phpcaptcha.org/?p=56">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<link rel="stylesheet" type="text/css" href="./定制验证码_files/shCore.css"><link rel="stylesheet" type="text/css" href="./定制验证码_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" src="./定制验证码_files/superfish.js"></script>
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function(){
+// superfish menus
+jQuery('ul.menu').superfish();
+});
+</script>
+
+<script type="text/javascript" src="./定制验证码_files/prettyPhoto.js"></script>
+<link type="text/css" media="screen" rel="stylesheet" href="./定制验证码_files/prettyphoto.css">
+<script type="text/javascript" charset="utf-8">
+		jQuery.noConflict();
+		jQuery(document).ready(function(){
+			jQuery("a[rel^='prettyphoto']").prettyPhoto({
+				animationSpeed: 'normal', /* fast/slow/normal */
+				padding: 40, /* padding for each side of the picture */
+				opacity: 0.35, /* Value betwee 0 and 1 */
+				showTitle: false, /* true/false */
+				allowresize: true, /* true/false */
+				counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+				theme: 'light_rounded', /* light_rounded / dark_rounded / light_square / dark_square */
+				hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
+				modal: false, /* If set to true, only the close button will close the window */
+				changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
+				callback: function(){} /* Called when prettyPhoto is closed */
+			});
+		});
+	</script>
+
+<!--[if IE 6]>
+<link href="http://www.phpcaptcha.org/wp-content/themes/orion/css/ie6.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="http://www.phpcaptcha.org/wp-content/themes/orion/js/pngfix.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('h1#graphic a,span#graphic a,div#nav ul.menu li,div#nav ul.menu li a,#st_slider_nav a.previous, #st_slider_nav a.next, #st_slider img,div#main,div#nav ul.menu,img.alignleft,img.alignright,.copy a,div#sticker');
+</script>
+<![endif]-->
+
+<!--[if IE 7]>
+<link href="http://www.phpcaptcha.org/wp-content/themes/orion/css/ie7.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+
+<!--[if lt IE 8]>  
+<link href="http://www.phpcaptcha.org/wp-content/themes/orion/css/ie8.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+<script type="text/javascript">var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-1523095-12']);_gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+</head>
+
+<body class="page page-id-56 page-child parent-pageid-6 page-template-default" style="">
+<script type="text/javascript">
+    window._idl = {};
+    _idl.variant = "banner";
+    (function() {
+        var idl = document.createElement('script');
+        idl.type = 'text/javascript';
+        idl.async = true;
+        idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
+        document.getElementsByTagName('body')[0].appendChild(idl);
+    })();
+</script><script type="text/javascript" async="" src="./定制验证码_files/saved_resource"></script>
+
+
+<!--/header-->
+
+
+<div id="main">
+
+<div class="container_24" id="container">
+
+  <div class="mainbody">
+
+    <div class="grid_24">
+
+      <div id="content" class="r">
+
+		
+		
+		<div class="post" id="post-56">
+
+			
+                                				<h1>自定义验证码</h1>
+                                
+			
+			<div class="entry">
+
+			
+				<p>这篇文档介绍如何更改配置来改变Securimage验证码的外观</p>
+<p>可以在两处地方改变Securimage的外观，通过securimage.php文件中的<strong>__construct()</strong>方法设置，或者直接修改securimage_show.php(推荐)。下面的例子将展示给你如何改变securimage_show.php的设置</p>
+<ul>
+<li><a href="#colors">改变颜色</a></li>
+<li><a href="#backgrounds">使用背景</a></li>
+<li><a href="#difficulty">改变复杂度</a></li>
+<li><a href="#fonts">自定义字体</a></li>
+<li><a href="#signature">添加签名</a></li>
+<li><a href="#size">调整图像大小</a></li>
+<li><a href="#charset">改变字符集</a></li>
+<li><a href="#random">随机化属性</a></li>
+</ul>
+<h3><a name="colors">改变颜色</a></h3>
+<p>
+颜色的设置灵活又简单，所有颜色都可以用来对<strong>Securimage_Color</strong>类进行设置。颜色可以给RGB值或是HTML十六进制值。下面介绍这两种方法。
+</p>
+<div id="highlighter_361997" class="syntaxhighlighter  "><div class="bar                   show"><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_361997_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_361997" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// 使用RGB值 0 - 255：</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="comments">// 设置为蓝色 R=0, G=0, B=255</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="variable">$color</code> <code class="plain">= </code><code class="keyword">new</code> <code class="plain">Securimage_Color(0, 0, 255);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="comments">// 和上面一样，除了使用十六进制</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="variable">$color</code> <code class="plain">= </code><code class="keyword">new</code> <code class="plain">Securimage_Color(0, 0, 0xff);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="comments">// 使用 HTML/CSS 颜色代码</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="comments">// 用HTML代码将颜色设为浅蓝</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="variable">$color</code> <code class="plain">= </code><code class="keyword">new</code> <code class="plain">Securimage_Color(</code><code class="string">'#3388FF'</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="comments">// 和上面一样，除了使用RGB三元色</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="variable">$color</code> <code class="plain">= </code><code class="keyword">new</code> <code class="plain">Securimage_Color(</code><code class="string">'#38F'</code><code class="plain">);</code></td></tr></tbody></table></div></div></div>
+<p>下面的例子介绍了改变<strong>背景、文本、干扰线颜色</strong>应该使用什么属性。</p>
+<div id="highlighter_492083" class="syntaxhighlighter  "><div class="bar        "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_492083_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_492083" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">//在securimage_show.php文件中</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 设置背景颜色为白色</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;image_bg_color = </code><code class="keyword">new</code> <code class="plain">Securimage_Color(</code><code class="string">'#ffffff'</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="comments">// 设置文字颜色为深灰色</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;text_color = </code><code class="keyword">new</code> <code class="plain">Securimage_Color(</code><code class="string">'#525252'</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="comments">// 设置干扰线颜色为深灰色来配合文字</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;line_color = </code><code class="keyword">new</code> <code class="plain">Securimage_Color(</code><code class="string">'#525252'</code><code class="plain">);</code></td></tr></tbody></table></div></div></div>
+<h3><a name="backgrounds">使用背景</a></h3>
+<p>在Securimage里，使每张验证码图都使用同一张背景非常容易。也可以设置为每张验证码都从背景目录中随机取一个背景。要注意，背景要在尺寸相符合（默认230×80）的验证码图中才会看起来很棒，但即使与验证码尺寸不符合，背景也会被强制拉伸为相符合的尺寸。</p>
+<p>使用统一的背景，只需要编辑securimage_show.php的最后一行，将背景的绝对路径作为参数传入show()方法即可。</p>
+<div id="highlighter_362527" class="syntaxhighlighter  "><div class="bar    "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_362527_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_362527" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php文件 - 这是最后一行</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 将背景图片地址传入show() - 必须为绝对路径</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;show( </code><code class="string">'/home/user/public/securimage/backgrounds/image.png'</code> <code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="comments">// windows服务器下</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;show( </code><code class="string">'C:\\inetpub\\wwwroot\\securimage\\backgrounds\\image.png'</code> <code class="plain">);</code></td></tr></tbody></table></div></div></div>
+<p>不仅是单一的背景，Securimage还提供了<strong>背景</strong>文件夹。Securimage folder中包含多个 png、jpg、和 gif 图像，它们都可以在生成验证码的时候被随机抽选到。</p>
+<div id="highlighter_975198" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_975198_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_975198" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php文件</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 设置背景文件目录</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="comments">// 使用dirname可以自动识别文件夹的路径</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;background_directory = dirname(</code><code class="constants">__FILE__</code><code class="plain">) . </code><code class="string">'/backgrounds/'</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+<p>Securimage自带几个背景, 不过你可以上传你自己的背景，它们都会被验证码用到。</p>
+<h3><a name="difficulty">改变复杂度</a></h3>
+<p>使机器自动识别验证码的难度增加有两个因素，一是字符本身的扭曲程度，二是随机添加的干扰线。若字符的扭曲程度足够变态，机器将不会有多少成功率来判断其真实的值。用扭曲的线条穿过图像也能很大程度迷惑机器识别，机器会认为干扰线是字符的一部分，这样就不能判断出正确的值。</p>
+<p>另一方面，网站站长不会希望验证码太难看懂以至于出现用户流失的情况。</p>
+<p>扭曲级别由<strong>perturbation</strong>属性控制，干扰线的多少由<strong>num_lines</strong>属性控制。</p>
+<div id="highlighter_565304" class="syntaxhighlighter  "><div class="bar    "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_565304_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_565304" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php脚本</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 设置字符扭曲程度</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;perturbation = 0.75; </code><code class="comments">// 默认</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="comments">// 高度扭曲，不建议超过 1</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;perturbation = 1;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="comments">// 无扭曲，字体是正常状态</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;perturbation = 0;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="comments">// 在验证码上画干扰线</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;num_lines = 10; </code><code class="comments">// 很大数量的干扰线</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;num_lines = 0; </code><code class="comments">// 无干扰线，只有验证码</code></td></tr></tbody></table></div></div></div>
+<h3><a name="fonts">自定义字体</a></h3>
+<p>为了创建一张个性的验证码图，你可能希望使用一个不同于Securimage自带的字体。更复杂的字体能使机器自动辨认验证码更困难。 Securimage可以加载任何<a href="http://en.wikipedia.org/wiki/TrueType" target="_new">TTF 字体</a></p>
+<p>为了使用你自己的字体，上传TTF字体至Securimage目录 (默认的AHGBold.ttf字体所在目录)。为了防止加载字体时出现错误，确保字体的文件名中没有空格或其他特殊字符，并且扩展名为.ttf。字体的加载由 <strong>ttf_file</strong> 属性控制。</p>
+<div id="highlighter_453018" class="syntaxhighlighter  "><div class="bar  "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_453018_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_453018" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php脚本</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 设置自定义字体</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;ttf_file = </code><code class="variable">$img</code><code class="plain">-&gt;basepath . </code><code class="string">'/fontfile.ttf'</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+<p>若字体已经上传至Securimage目录，使用<strong>basepath</strong>属性来指定目录地址。basepath自动注册并指向Securimage目录。若你将字体文件放在其他位置，需要指定绝对路径，否则将不会正确加载。</p>
+<h3><a name="signature">添加签名</a></h3>
+<p>签名是由CAPTCHA生成的出现在验证码右下角的小块文字。签名可以是你的域名、短句、或是你想展示在验证码上的任何文字。</p>
+<p>下面的例子会显示如何添加一个签名并改变其颜色</p>
+<div id="highlighter_211918" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_211918_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_211918" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php脚本</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 设置签名为"你的网站.com"并设置颜色为黑色</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;image_signature = </code><code class="string">'yourdomain.com'</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;signature_color = </code><code class="keyword">new</code> <code class="plain">Securimage_Color(</code><code class="string">'#000000'</code><code class="plain">);</code></td></tr></tbody></table></div></div></div>
+<h3><a name="size">调整验证码图像大小</a></h3>
+<p><strong>image_width</strong> 和 <strong>image_height</strong> 属性可以用来调整验证码图像的大小。为了避免验证码文字溢出图像，图像的宽要设置为至少2.7倍于高。计算大小的最好方法是选取一个合适的高，然后乘以2.875为宽或者选取一个合适的宽乘以0.35为高。</p>
+<div id="highlighter_153141" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_153141_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_153141" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php脚本</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 设置宽并计算出最佳的高</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;image_width = 260;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;image_height = (int)(</code><code class="variable">$img</code><code class="plain">-&gt;image_width * 0.35);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="comments">// 设置高并计算出最佳的宽</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;image_height = 50;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;image_width = (int)(</code><code class="variable">$img</code><code class="plain">-&gt;image_height * 2.875);</code></td></tr></tbody></table></div></div></div>
+<p>上面的乘法仅作为指导，你可以尝试不同的宽和高来选取出适合你当前配置的值。</p>
+<h3><a name="charset">改变字符集</a></h3>
+<p>Securimage使用的默认字符集为[a-zA-Z0-9]，但不包含一些容易混淆的字符。这样可以减少用户对某些相似字符的困惑，特别是对于某些字体或高度扭曲的字符。不包含的字符有<strong>I,  J, O, Q, i, j, o, q, 0 (zero) and 1 (one)</strong>。</p>
+<p>引用指定字符串作为字符集需要用 <strong>charset</strong> 属性。超过一次指定相同的字符意味着这个字符将有更高的概率出现在验证码中。</p>
+<div id="highlighter_404996" class="syntaxhighlighter  "><div class="bar  "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_404996_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_404996" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// in securimage_show.php</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 只有大写A-Z的验证码</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;charset = </code><code class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="comments">// 只有数字的验证码</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;charset = </code><code class="string">'0123456789'</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="comments">// 小写字母和数字，一些容易混淆的除外</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;charset = </code><code class="string">'abcdefghklmnprstuvwyz23456789'</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+<h3><a name="random">随机化属性</a></h3>
+<p>为了使机器识别更加困难，一些值可以随机化来防御机器猜出你的验证码。这个例子显示如何使用php的rand()函数来随机化一些验证码属性。</p>
+<div id="highlighter_847474" class="syntaxhighlighter  "><div class="bar                  "><div class="toolbar"><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_847474_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_847474" menu="false" src="http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.phpcaptcha.org/documentation/customizing-securimage/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="comments">// securimage_show.php脚本</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="comments">// 生成一个4-6位的验证码</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;code_length = rand(4, 6);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="comments">// 改变干扰线的数量</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="variable">$img</code><code class="plain">-&gt;num_lines = rand(3, 10);</code></td></tr></tbody></table></div></div></div>
+
+				<div class="clearfix"></div>
+
+				
+			</div>
+
+		</div>
+
+		
+
+	    
+		
+
+	
+
+
+
+
+
+
+ <!-- end #comments_wrap -->
+
+
+
+
+
+
+ <!-- end #respond -->
+
+
+
+
+
+
+
+		
+	
+  
+
+
+
+		  </div><!--/content-->
+
+		</div><!--/main grid_x-->
+
+	
+	<!--right sidebar-->
+
+	<!--/grid_7-->
+
+	
+	<div class="clear"></div>
+
+	</div><!--/container-->
+
+	</div><!--/main-->
+
+	</div><!--/mainbody-->
+
+
+
+<!--/footer-->
+
+<script type="text/javascript" src="./定制验证码_files/shCore.js"></script>
+<script type="text/javascript" src="./定制验证码_files/shBrushPhp.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeDefault.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://www.phpcaptcha.org/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+
+
+</body></html>
