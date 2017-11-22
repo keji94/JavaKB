@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg>
+<defs>
+<radialGradient id="rg" fx="50%" fy="80%" >
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="white" stop-opacity="0" offset="100%"/>
+</radialGradient>
+
+<radialGradient id="rg1" fx="50%" fy="100%" cx="50%" cy="60%">
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="white" stop-opacity="0" offset="100%"/>
+</radialGradient>
+
+<radialGradient id="rg6">
+<stop stop-color="#00ced1" stop-opacity="1" offset="0%"/>
+<stop stop-color="#40e0d0" stop-opacity="1" offset="100%"/>
+</radialGradient>
+
+<radialGradient id="rg5" fx="50%" fy="0%" cx="50%" cy="40%">
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="white" stop-opacity="0" offset="100%"/>
+</radialGradient>
+
+<radialGradient id="rg2" fx="25%" fy="25%">
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="#40e0d0" stop-opacity="1" offset="100%"/>
+</radialGradient>
+
+<radialGradient id="rg3" cx="35%" cy="35%">
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="#40e0d0" stop-opacity="1" offset="100%"/>
+</radialGradient>
+
+<radialGradient id="rg4" cx="65%" cy="65%" fx="25%" fy="25%">
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="#40e0d0" stop-opacity="1" offset="100%"/>
+</radialGradient>
+
+<linearGradient id="lg" x1="50%" y1="0%" x2="50%" y2="100%">
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="white" stop-opacity="1" offset="0%"/>
+<stop stop-color="white" stop-opacity="0" offset="50%"/>
+</linearGradient>
+</defs>
+<circle cx="100" cy="100" r="80" stroke="none" fill="#40e0d0" display=""/>
+<circle cx="100" cy="110" r="65" stroke="none" fill="url(#rg)" fill-opacity="0.9"/>
+<circle cx="100" cy="90" r="65" stroke="none" fill="url(#lg)" fill-opacity="0.8"/>
+
+<circle cx="300" cy="100" r="80" stroke="none" fill="#40e0d0"/>
+<circle cx="300" cy="90" r="65" stroke="none" fill="url(#lg)" fill-opacity="0.8"/>
+
+<circle cx="500" cy="100" r="80" stroke="none" fill="#40e0d0" display=""/>
+<circle cx="500" cy="90" r="65" stroke="none" fill="url(#rg5)" fill-opacity="0.9"/>
+
+<circle cx="700" cy="100" r="80" stroke="none" fill="url(#rg2)"/>
+<circle cx="900" cy="100" r="80" stroke="none" fill="url(#rg3)"/>
+<circle cx="100" cy="300" r="80" stroke="none" fill="url(#rg4)"/>
+
+<circle cx="300" cy="300" r="80" stroke="none" fill="#40e0d0" display=""/>
+<circle cx="300" cy="310" r="65" stroke="none" fill="url(#rg1)" fill-opacity="0.8"/>
+<circle cx="300" cy="290" r="65" stroke="none" fill="url(#lg)" fill-opacity="0.8"/>
+
+<circle cx="500" cy="300" r="80" stroke="none" fill="#40e0d0" display=""/>
+<circle cx="500" cy="310" r="70" stroke="none" fill="url(#rg6)" fill-opacity="1"/>
+<circle cx="500" cy="290" r="65" stroke="none" fill="url(#lg)" fill-opacity="0.8"/>
+</svg>
+
+
+
+
+

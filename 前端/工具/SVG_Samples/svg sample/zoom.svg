@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20000303 Stylable//EN"
+"http://www.w3.org/TR/2000/03/WD-SVG-20000303/DTD/svg-200000303-stylable.dtd">
+
+<svg width="25cm" height="15cm" viewBox="0 0 2500 1500">
+   <desc>&#xCB;&#xF5;&#xB7;&#xC5;</desc>
+   <script><![CDATA[
+      SVGDocument = null;
+      var s1 = null;
+      var zoomRate = 2;
+      var myZoom = 1;
+      function zoomOut(evt) {
+         //reference to the black rect named s1
+         SVGDocument = evt.getTarget().getOwnerDocument();
+         s1 = SVGDocument.getElementById( 's1' );
+         var myX = s1.getAttributeNS(null,"x");
+         var myY = s1.getAttributeNS(null,"y");
+         myZoom/=zoomRate; 
+         var newtransform = "scale(" + myZoom + ") translate(" + (myX * 1 / myZoom - myX) + " " + (myY * 1 / myZoom - myY)+")";
+         s1.setAttributeNS(null,'transform', newtransform);
+      }
+      function zoomIn(evt) {
+         //reference to the black rect named s1
+         SVGDocument = evt.getTarget().getOwnerDocument();
+         s1 = SVGDocument.getElementById( 's1' );
+         var myX = s1.getAttributeNS(null,"x");
+         var myY = s1.getAttributeNS(null,"y");
+         myZoom*=zoomRate; 
+         var newtransform = "scale(" + myZoom + ") translate(" + (myX * 1 / myZoom - myX) + " " + (myY * 1 / myZoom - myY) +")";
+         s1.setAttributeNS(null,'transform', newtransform);
+      }
+   ]]>
+   </script>
+
+   <g id="s1" >
+      <image x="50" y="50" style="cursor:pointer" width="1024" height="1493" xlink:href="sytu1.jpg"  />
+   </g>
+
+   <g onclick="zoomOut(evt)" transform="matrix(1,0,0,1,-28.9666,1082.53)">
+      <rect x="50" y="300" width="200" height="100" style="fill:blue;" />
+      <text x="50" y="350" style="font-family:Verdana;font-size:35;">
+         zoom out
+      </text>
+   </g>
+
+   <g onclick="zoomIn(evt)" transform="matrix(1,0,0,1,-50.0574,1078.73)">
+      <rect x="300" y="300" width="200" height="100" style="fill:red;" />
+      <text x="300" y="350" style="font-family:Verdana;font-size:35;">
+         zoom in
+      </text>
+   </g>
+
+</svg>
+

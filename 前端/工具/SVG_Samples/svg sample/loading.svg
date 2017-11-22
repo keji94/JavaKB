@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg>
+<defs></defs>
+
+<text x="100" y="100" font-size="50" stroke="#ff8c05" fill="#ff8c05">
+   Loading</text>
+<rect x="290" y="90" width="10" height="10" stroke="#a2b700" fill="none" stroke-width="2">
+   <set attributeName="stroke" to="#049ff1" begin="0.5s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="3" begin="0.5s" repeatCount="indefinite"/>
+   <set attributeName="stroke" to="#a2b700" begin="1s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="2" begin="1s" repeatCount="indefinite"/>
+</rect>
+<rect x="320" y="92" width="8" height="8" stroke="#a2b700" fill="none" stroke-width="2">
+   <set attributeName="stroke" to="#049ff1" begin="1s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="3" begin="1s" repeatCount="indefinite"/>
+   <set attributeName="stroke" to="#a2b700" begin="1.5s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="2" begin="1.5s" repeatCount="indefinite"/>
+</rect>
+<rect x="350" y="94" width="6" height="6" stroke="#a2b700" fill="none" stroke-width="2">
+   <set attributeName="stroke" to="#049ff1" begin="1.5s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="3" begin="1.5s" repeatCount="indefinite"/>
+   <set attributeName="stroke" to="#a2b700" begin="2s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="2" begin="2s" repeatCount="indefinite"/>
+</rect>
+<rect x="380" y="96" width="4" height="4" stroke="#a2b700" fill="none" stroke-width="2">
+   <set attributeName="stroke" to="#049ff1" begin="2s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="3" begin="2s" repeatCount="indefinite"/>
+   <set attributeName="stroke" to="#a2b700" begin="2.5s" repeatCount="indefinite"/>
+   <set attributeName="stroke-width" to="2" begin="2.5s" repeatCount="indefinite"/>
+</rect>
+</svg>

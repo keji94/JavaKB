@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <title>4种不同类型的jQuery弹出层对话框</title>
+        <meta name="keywords" content="弹出层,对话框" />
+        <meta name="description" content="今天我们来演示下自己手写的弹出层对话框，不借助任何插件。" />
+        <link rel="stylesheet" type="text/css" href="http://www.sucaihuo.com/jquery/css/common.css" />
+        <link href="css/qikoo.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="head">
+            <div class="head_inner clearfix">
+                <ul id="nav">
+                    <li><a href="http://www.sucaihuo.com">首 页</a></li>
+                    <li><a href="http://www.sucaihuo.com/templates">网站模板</a></li>
+                    <li><a href="http://www.sucaihuo.com/js">网页特效</a></li>
+                    <li><a href="http://www.sucaihuo.com/php">PHP</a></li>
+                    <li><a href="http://www.sucaihuo.com/site">精选网址</a></li>
+                </ul>
+                <a class="logo" href="http://www.sucaihuo.com"><img src="http://www.sucaihuo.com/Public/images/logo.jpg" alt="素材火logo" /></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="demo">
+                <h2 class="title"><a href="http://www.sucaihuo.com/js/101.html">4种不同类型的jQuery弹出层对话框</a></h2>
+                <p style="margin:50px  0 0 0"> 
+                    <input class="btn" value="缴费提示层" onclick="payment();"/>
+                    <input class="btn" value="确认框提示层" onclick="Confirm();"/>
+                    <input class="btn" value="alert提示层" onclick="Alert();"/>
+                    <input value="删除商品提示层" class="delOrder btn" item_id="123"/>
+                </p>
+            </div>
+        </div>
+        <div class="foot">
+            Powered by sucaihuo.com  本站皆为作者原创，转载请注明原文链接：<a href="http://www.sucaihuo.com" target="_blank">www.sucaihuo.com</a>
+        </div>
+        <script type="text/javascript" src="http://www.sucaihuo.com/Public/js/other/jquery.js"></script> 
+        <script type="text/javascript" src="qikoo.js"></script>
+        <script type="text/javascript">
+                        //是否缴费完成
+                        function payment() {
+                            qikoo.dialog.payNotice(function() {
+                                alert("已完成缴费按钮"); //已缴费完成的提示
+                            }, function() {
+                                alert("你点了缴费遇到问题按钮"); //缴费遇到问题的提示
+                            }, function() {
+                                alert("你点了关闭按钮"); //关闭按钮的提示
+                            });
+                        }
+
+                        function Confirm() {
+                            qikoo.dialog.confirm('确定要删除此商品吗？', function() {
+                                alert("删除啦！");
+
+                            }, function() {
+                                alert("取消啦！");
+                            });
+                        }
+
+                        function Alert() {
+                            qikoo.dialog.alert("素材火 - sucaihuo.com");
+                        }
+
+                        $(function() {
+                            $(".delOrder").click(function(e) {
+                                _this = $(e.target);
+                                tips.cartTip(_this);
+                            });
+                            var tips = {
+                                cartTip: function(_this) {
+                                    var tpl = [
+                                        '<div class="dialog-delorder">',
+                                        '<div class="dialog-bar">',
+                                        '温馨提示',
+                                        '<a href="#" onclick="return false;" class="dialog-close" title="关闭"></a>',
+                                        '</div>',
+                                        '<div class="dialog-content">',
+                                        '<p>确定从购物车中删除此商品？</p>',
+                                        '</div>',
+                                        '<div class="dialog-console">',
+                                        '<a class="console-btn-confirm" href="#" onclick="return false;" title="确定">确定</a>',
+                                        '<a class="console-btn-cancel" href="#" onclick="return false;" title="取消">取消</a>',
+                                        '</div>',
+                                        '</div>'
+                                    ].join('');
+                                    var dialogEle = $(tpl).appendTo('body');
+                                    var mainEle = dialogEle.filter('.dialog-delorder');
+                                    var top = _this.offset().top + 20;
+                                    var left = _this.offset().left;
+                                    mainEle.css('top', top);
+                                    mainEle.css('left', left);
+                                    dialogEle.filter('.dialog-bg').css('height', $(document).height());
+                                    dialogEle.find('a.console-btn-confirm').click(function() {
+                                        tips.warTip("ID为 " + _this.attr("item_id") + " 的商品已经被删除了！");
+                                        $(".dialog-delorder").remove();
+                                    });
+                                    dialogEle.find('a.console-btn-cancel,a.dialog-close').click(function() {
+                                        $(".dialog-delorder").remove();
+                                    });
+                                },
+                                warTip: function(txt) {
+                                    var tpl = [
+                                        '<div class="dialog-war">',
+                                        '<div class="dialog-bar">',
+                                        '提示',
+                                        '<a href="#" onclick="return false;" class="dialog-close" title="关闭"></a>',
+                                        '</div>',
+                                        '<div class="dialog-content">',
+                                        '<p>' + txt + '</p>',
+                                        '<div class="dialog-console">',
+                                        '<a class="console-btn-confirm" href="#" onclick="return false;" title="确定">确定</a>',
+                                        '</div>',
+                                        '</div>',
+                                        '</div>'
+                                    ].join('');
+                                    var dialogEle = $(tpl).appendTo('body');
+                                    var mainEle = dialogEle.filter('.dialog-war');
+                                    var left = ($(window).width() - mainEle.width()) / 2;
+                                    mainEle.css('left', left);
+                                    mainEle.css('top', '200px');
+                                    dialogEle.filter('.dialog-bg').css('height', $(document).height());
+                                    dialogEle.find('a.dialog-close,a.console-btn-confirm').click(function() {
+                                        $(".dialog-war").remove();
+                                    });
+                                }
+                            };
+                        });
+        </script>
+
+    </body>
+</html>
+

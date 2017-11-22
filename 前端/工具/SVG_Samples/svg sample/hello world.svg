@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg width="800" height="600" stroke="purple" fill="pink">
+<title>hello world sample</title>
+<desc>sample</desc>
+ <rect width="400" height="300" x="0" y="0" stroke="black" stroke-width="2" fill="none"/>
+ <text fill="red" stroke="blue" stroke-width="1" x="100" y="100">Hello world!</text>
+</svg>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg>
+<defs>
+<marker id="mak1"
+ fill="red"
+ markerWidth="10" markerHeight="10"
+ refX="0" refY="5"
+ orient="auto">
+ <path d="M0 0 L10 5 L0 10z"/>
+</marker>
+</defs>
+<path d="M100 100 S150 300 250 120 450 120 560 200" style="fill:none;stroke:purple;stroke-width:4;
+marker-start:url(#mak1);marker-mid:url(#mak1);marker-end:url(#mak1)" />
+<a name="l" xlink:href="#l(viewBox(0 0 200 200))">
+  <rect x="200" y="350" width="200" height="50" style="fill:blue;stroke:blue;stroke-width:20;stroke-dasharray:10 10"/>
+  <text x="200" y="300" style="text-decoration:underline;font-size:50;stroke:black">Alay's introduction</text>
+</a>
+</svg>
+

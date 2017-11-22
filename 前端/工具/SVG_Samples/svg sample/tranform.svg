@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg width="800" height="600">
+<title>Transform</title>
+<g style="fill:none;stroke:purple;stroke-width:4">
+  <line x1="2" y1="2" x2="780" y2="2"/>
+  <line x1="2" y1="2" x2="2" y2="580"/>
+</g>
+<g fill="none" stroke="blue" stroke-width="3" transform="translate(90,30) rotate(30)">
+  <text x="5" y="20" font-size="20">Rotate(30)</text>
+  <line x1="2" y1="2" x2="200" y2="2"/>
+  <line x1="2" y1="2" x2="2" y2="150"/>
+</g>
+<g fill="none" stroke="yellow" stroke-width="3" transform="translate(300,30) scale(1.5,1)">
+  <text x="5" y="20" font-size="20" stroke="black">Scale(1.5,1)</text>
+  <line x1="2" y1="2" x2="200" y2="2"/>
+  <line x1="2" y1="2" x2="2" y2="150"/>
+</g>
+<g fill="none" stroke="red" stroke-width="3" transform="translate(30,300) skewX(45)">
+  <text x="5" y="20" font-size="20">SkewX(45)</text>
+  <line x1="2" y1="2" x2="200" y2="2"/>
+  <line x1="2" y1="2" x2="2" y2="150"/>
+</g>
+<g fill="none" stroke="purple" stroke-width="3" transform="translate(300,300) skewY(25)">
+  <text x="5" y="20" font-size="20">SkewY(25)</text>
+  <line x1="2" y1="2" x2="200" y2="2"/>
+  <line x1="2" y1="2" x2="2" y2="150"/>
+</g>
+</svg>

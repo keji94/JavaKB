@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg width="800" height="600">
+  <title>ellipse arc</title>
+<g style="fill:yellow;stroke:purple;stroke-width:1">
+  <path d="M100,100 A50,80 45 1 1 200,100"/>
+  <path d="M300,100 A50,80 45 0 1 400,100"/>
+  <path d="M100,300 A50,80 45 1 0 200,300"/>
+  <path d="M300,300 A50,80 45 0 0 400,300"/>
+</g>
+<text x="2" y="115">path d="M100,100 A50,80 45 1 1 200,100"</text>
+<text x="180" y="135">path d="M300,100 A50,80 45 0 1 400,100"</text>
+<text x="2" y="260">path d="M100,300 A50,80 45 1 0 200,300"</text>
+<text x="180" y="275">path d="M300,300 A50,80 45 0 0 400,300"</text>
+</svg>

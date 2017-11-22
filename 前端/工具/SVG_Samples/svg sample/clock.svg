@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg onload="init()">
+<defs>
+<radialGradient id="rg1" fx="25%" fy="25%">
+  <stop stop-color="white" offset="0%"/>
+  <stop stop-color="#049ff1" offset="100%"/>
+</radialGradient>
+<linearGradient id="lg1" x1="50%" y1="0%" x2="50%" y2="100%">
+  <stop stop-color="white" offset="0%"/>
+  <stop stop-color="green" offset="100%"/> 
+</linearGradient>
+</defs>
+<script><![CDATA[
+var sta,fin,swith,m_sta,m_fin,h_sta,h_fin,hc,first;
+fin=0;m_fin=0;h_fin=0;m_sta=0;h_sta=0;hc=0;
+swith=0;first=0;
+function init(){
+   var from,to;
+   var t2=document.getElementById("t2");
+   var date=new Date();
+   var h=date.getHours();
+   var m=date.getMinutes();
+   var s=date.getSeconds();
+   t2.firstChild.nodeValue=date;
+   if(h>12)
+    h=h-12;
+   s=s*6;
+   fin=s;sta=fin;
+   h=h*30+m/2;
+   m=m*6;
+   m_fin=m;m_sta=m_fin;
+   h_fin=h;h_sta=h_fin;
+setSecond();
+}
+    
+function setSecond(){
+   var se=new Date().getMinutes();
+   var anis=document.getElementById("anis");
+   var anim=document.getElementById("anim");
+   var anih=document.getElementById("anih");
+   var t=document.getElementById("t");
+   var t2=document.getElementById("t2")
+   var t3=document.getElementById("t3")
+   var t4=document.getElementById("t4")
+ if(swith==0){
+    from=sta+" 550 200";
+    to=fin+" 550 200";
+    anis.setAttribute("from",from);
+    anis.setAttribute("to",to);
+    anis.setAttribute("dur","1s");
+    anis.setAttribute("fill","freeze");
+    anis.beginElement();
+   from=m_sta+" 550 200";
+   to=m_fin+" 550 200";
+     anim.setAttribute("from",from);
+     anim.setAttribute("to",to);
+     anim.setAttribute("dur","1s");
+     anis.setAttribute("fill","freeze");
+     anim.beginElement();
+   from=h_sta+" 550 200";
+   to=h_fin+" 550 200";
+     anih.setAttribute("from",from);
+     anih.setAttribute("to",to);
+     anih.setAttribute("dur","1s");
+     anis.setAttribute("fill","freeze");
+     anih.beginElement();
+   swith=1;
+ }
+
+   anih.endElement();
+   anim.endElement();
+   anis.endElement();
+   anis.setAttribute("dur","1s");
+   t3.firstChild.nodeValue=m_sta+" minute "+m_fin;
+   anim.setAttribute("dur","1s");
+   t2.firstChild.nodeValue=h_sta+" hour "+h_fin;
+   anih.setAttribute("dur","1s");
+   if(fin>=360){
+         
+               hc++;
+               t.firstChild.nodeValue=hc;
+               if(h_fin>=360){
+                  h_sta=0;
+                  h_fin=6;
+                  }
+               else if(hc>=2){
+                  h_fin=h_fin+1;
+                  h_sta=h_fin;                
+                  hc=0;
+                  from=h_sta+" 550 200";
+                  to=h_fin+" 550 200";
+                  anih.setAttribute("from",from);
+                  anih.setAttribute("to",to);
+                  anih.beginElement();
+                 t2.firstChild.nodeValue=h_sta+" hour "+h_fin;
+                }
+          if(m_fin>=360){
+             m_sta=0;
+             m_fin=6;
+           }
+           else{
+              m_fin=m_fin+6;
+              m_sta=m_fin;
+           }
+         from=m_sta+" 550 200";
+         to=m_fin+" 550 200";
+         anim.setAttribute("from",from);
+         anim.setAttribute("to",to);
+         anim.beginElement();
+         t3.firstChild.nodeValue=m_sta+" minute "+m_fin;
+     fin=6;
+     sta=fin;
+   }
+   else{     
+     fin=fin+6;
+     sta=fin;
+    }
+    from=sta+" 550 200";
+    to=fin+" 550 200";
+    anis.setAttribute("from",from);
+    anis.setAttribute("to",to);
+    anis.beginElement();
+    t4.firstChild.nodeValue=sta+" second "+fin;
+ window.setTimeout("setSecond()",1000);
+}
+]]>
+</script>
+
+<circle cx="350" cy="200" r="50" stroke="blue" fill="none" />
+<path d="M300 200 C300 135 400 135 400 200 C400 265 300 265 300 200" stroke="gray" stroke-width="2" 
+fill="url(#lg1)" fill-opacity="0.5"/>
+<rect x="300" y="200" width="10" height="4" fill="url(#rg1)" stroke="none"/>
+<rect x="390" y="200" width="10" height="4" fill="url(#rg1)" stroke="none"/>
+<rect x="348" y="150" width="4" height="10" fill="url(#rg1)" stroke="none"/>
+<rect x="348" y="240" width="4" height="10" fill="url(#rg1)" stroke="none"/>
+
+<line id="h" x1="0" y1="20" x2="0" y2="50" stroke="#04477c" stroke-width="4">
+  <animateMotion rotate="auto" dur="12h" repeatCount="indefinite"
+   path="M300 200 C300 135 400 135 400 200 C400 265 300 265 300 200"/>
+</line>
+
+<line id="m" x1="0" y1="10" x2="0" y2="50" stroke="#049ff1" stroke-width="2">
+  <animateMotion rotate="auto" dur="60min" repeatCount="indefinite"
+   path="M300 200 C300 135 400 135 400 200 C400 265 300 265 300 200"/>
+</line>
+
+<line id="s" x1="0" y1="0" x2="0" y2="50" stroke="red">
+  <animateMotion rotate="auto" dur="60s" repeatCount="indefinite"
+  path="M300 200 C300 135 400 135 400 200 C400 265 300 265 300 200"/>
+</line>
+<circle cx="350" cy="200" r="5" stroke="none" fill="url(#rg1)" />
+<desc>#####This right clock######</desc>
+<circle cx="550" cy="200" r="50" stroke="blue" fill="url(#lg1)" fill-opacity="0.4" stroke-width="2"/>
+<rect x="500" y="198" width="10" height="4" fill="url(#rg1)" stroke="none"/>
+<rect x="590" y="198" width="10" height="4" fill="url(#rg1)" stroke="none"/>
+<rect x="548" y="150" width="4" height="10" fill="url(#rg1)" stroke="none"/>
+<rect x="548" y="240" width="4" height="10" fill="url(#rg1)" stroke="none"/>
+
+<line x1="550" y1="200" x2="550" y2="175" stroke="#04477c" stroke-width="4">
+<animateTransform id="anih" attributeName="transform" type="rotate" repeatCount="indefinite"
+  from="0 550 200" to="90 550 200" dur="12min" begin="indefinite" end="indefinite" fill="freeze"/> 
+</line>
+<line x1="550" y1="200" x2="550" y2="162" stroke="#049ff1" stroke-width="2">
+<animateTransform id="anim" attributeName="transform" type="rotate" repeatCount="indefinite"
+  from="0 550 200" to="90 550 200" dur="1s" begin="indefinite" end="indefinite" fill="freeze"/> 
+</line>
+<line x1="550" y1="200" x2="550" y2="150" stroke="red">
+<animateTransform id="anis" attributeName="transform" type="rotate" repeatCount="indefinite"
+  from="0 550 200" to="90 550 200" dur="1s" begin="indefinite" end="indefinite" fill="freeze"/> 
+</line>
+<circle cx="550" cy="200" r="5" stroke="none" fill="url(#rg1)" />
+
+<text id="t" x="400" y="500">This type</text>
+<text id="t2" x="500" y="500">The second</text>
+<text id="t3" x="500" y="350">The second</text>
+<text id="t4" x="500" y="550">The second</text>
+</svg>
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg>
+<title>Usage of tspan</title>
+<defs>
+ <text id="i">Tish is the text define in the defs!</text>
+ <path id="tp" d="M300,100 S320,250 400,100 460,360 500,400"/>
+</defs>
+<text style="fill:green;stroke-width:3;font-size:30;font-family:impact">
+  <tspan x="50" y="50" dy="5,6,7,8,10,-1,-3,-5,">
+    useage of tspan
+  </tspan>
+</text>
+<text style="fill:green;stroke-width:3;font-size:30;font-family:impact;writing-mode:tb-rl">
+  <tspan x="50" y="200" dx="10,20,30,40,50,60,70,80,90" rotate="101,90,45,76,50,60,100,200,300,360">
+    useage of tspan旋转 (rotate)
+  </tspan>
+<tspan x="50" y="300" fill="blue">
+  <tref xlink:href="#i"/>
+</tspan>
+</text>
+<use xlink:href="#tp" fill="none" stroke="purple" stroke-width="3"/>
+
+<text font-size="20">
+<textPath xlink:href="#tp" startOffset="100">
+just this 
+<tspan font-size="30" stroke="red" text-decration="blink"> path</tspan>
+<tspan dy="20" style="stroke:#00ff00;text-decoration:line-through"> is the past path and rose!
+</tspan>
+</textPath>
+</text>
+
+<text x="600" y="100" style="stroke:blue;stroke-width:4;font-size:35;text-decoration:underline">
+underline text下划线
+</text>
+
+</svg>
+
+

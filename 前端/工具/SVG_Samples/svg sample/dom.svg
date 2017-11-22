@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Explorer v2.0 by Mergesoft (www.mergesoft.com)-->
+<svg>
+<script><![CDATA[
+  function E_mouseover(evt){
+    var text1=document.getElementById("text1");
+    var text2=document.getElementById("text2"); 
+    var text3=document.getElementById("text3");
+    if(evt=="t1")
+      var en=document.getElementById("t").firstChild;
+    else if(evt=="tt1")
+      var en=document.getElementById("tt").firstChild;
+    else
+    var en=document.getElementById(evt);
+    text1.firstChild.nodeValue=en.nodeName;
+    if(en.nodeName=="#text"){
+      text2.firstChild.nodeValue=en.nodeValue;
+      text3.firstChild.nodeValue="Null";
+     }
+    else{
+     text2.firstChild.nodeValue="Null";
+     text3.firstChild.nodeValue=en.getAttribute("id");
+    }
+  }  
+
+]]></script>
+<rect id="r1" x="200" y="50" width="100" height="50" stroke="orange" fill="green"
+   onmouseover="E_mouseover('t')"/>
+<rect id="r2" x="100" y="150" width="100" height="50" stroke="orange" fill="#70e1ff"
+   onmouseover="E_mouseover('t1')"/>
+<rect id="r3" x="300" y="150" width="100" height="50" stroke="orange" fill="#4499ee"
+   onmouseover="E_mouseover('tt')"/>
+<rect id="r4" x="300" y="250" width="100" height="50" stroke="orange" fill="#c5da01"
+   onmouseover="E_mouseover('tt1')"/>
+<text x="200" y="75" stroke="yellow" stroke-width="1" font-size="15">Text Element</text>
+<text x="110" y="175" stroke="yellow" stroke-width="1" font-size="15">#text</text>
+<text x="310" y="175" stroke="yellow" stroke-width="1" font-size="15">tspan</text>
+<text x="310" y="275" stroke="yellow" stroke-width="1" font-size="15">#text</text>
+<line x1="250" y1="100" x2="250" y2="150" stroke="black"/>
+<line x1="200" y1="150" x2="300" y2="150" stroke="black"/>
+<line x1="350" y1="200" x2="350" y2="250" stroke="black"/>
+<text id="t" font-size="30" x="500" y="50" stroke="purple" stroke-width="3">The
+  <tspan id="tt" stroke="blue">DOM </tspan>document!</text>
+<text x="520" y="120" stroke="black" stroke-width="1" font-size="15">nodeName:</text>
+<text id="text1" x="600" y="120" stroke="red" stroke-width="1" font-size="15">Null</text>
+<text x="520" y="170" stroke="black" stroke-width="1" font-size="15">nodeValue:</text>
+<text id="text2" x="600" y="170" stroke="red" stroke-width="1" font-size="15">Null</text>
+<text x="520" y="220" stroke="black" stroke-width="1" font-size="15">attribute("id"):</text>
+<text id="text3" x="640" y="220" stroke="red" stroke-width="1" font-size="15">Null</text>
+</svg>
+
