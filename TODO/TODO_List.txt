@@ -1,0 +1,6 @@
+1.理解Java垃圾回收机制
+
+2.switch支持的类型 
+	byte short int char enum String
+
+3.static 关键字的理解
