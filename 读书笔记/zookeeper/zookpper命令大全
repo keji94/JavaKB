@@ -1,0 +1,27 @@
+*开启停用服务
+	cd /Users/keji/develop/zookeeper/zookeeper-3.4.12/bin
+	./zkServer.sh start
+	./zkServer.sh stop
+*开始客户端
+	./zkCli.sh
+*退出客户端
+	quit
+*创建节点
+	create/master 创建master节点
+	create/workers "" 创建/workers节点，指定一个空字符串("")，说明该节点只能保存字符串数据
+	create -e /master "master1.example.com:2223" -e标志表示master节点为临时性的"master1.example.com:2223"为主机信息,添加主机信息不是必须的，
+	 											 只是表示可以在需要的时候添加信息
+*删除节点
+	delete/master
+*检查是某存在节点
+	exists/master
+*展示所有节点
+	ls /
+	ls /workers true 在主节点上调用stat命令前，我们使用可选的true参数调用ls命令。通过true这个参数，可以设置对应znode的子节点变化的监视点
+*设置监控
+	stat /master true 在/master节点设置监视点
+
+
+
+
+
